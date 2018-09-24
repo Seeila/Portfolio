@@ -4,7 +4,7 @@ const HamburgerMenu = ({ isMenuOpen, toggleMenu }) => (
    <button
       className={isMenuOpen ? "hamburger-btn open" : "hamburger-btn "}
       aria-haspopup="true"
-      aria-expanded="false"
+      aria-expanded={isMenuOpen ? "true" : "false"}
       aria-controls="nav-list"
       aria-label="Menu"
       onClick={toggleMenu}

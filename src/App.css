@@ -39,3 +39,4 @@ a {
 @import "./components/Nav/nav.css";
 @import "./components/Nav/hamburgerMenu.css";
 @import "./components/Nav/navList.css";
+@import "./routes/landing.css";
