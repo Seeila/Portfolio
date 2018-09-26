@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Cross from "../../assets/img/cross.svg";
 
 const NavList = ({ isMenuOpen, toggleMenu }) => (
    <section

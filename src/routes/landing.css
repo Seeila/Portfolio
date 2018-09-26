@@ -5,8 +5,7 @@
 .landing {
    position: relative;
    width:100%;
-   height:calc(100vh - 70px);
-   top:70px;
+   height:100vh;
    z-index:0;
    display: flex;
    flex-direction: column;
@@ -15,12 +14,16 @@
 }
 
 .landing .logo {
+   position: relative;
+   top:25px;
    width:80%;
    max-width:350px;
+   transition:1s;
 }
 
 .landing-presentation {
    position: relative;
+   top:25px;
    width: calc(80% - 6px);
    box-sizing: border-box;
    max-width:344px;
@@ -68,10 +71,19 @@
    margin-top:10px;
 }
 
+@media screen and (min-width: 370px) {
+
+   .landing .logo, .landing-presentation {
+      top:0;
+   }
+
+}
+
 
 @media screen and (min-width: 750px) {
    .landing {
       flex-direction: row;
+      height:100vh;
       top:0;
    }
 

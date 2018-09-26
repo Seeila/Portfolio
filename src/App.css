@@ -16,10 +16,24 @@
 body {
    color: #fff;
    font-family: "Montserrat", arial, sans-serif;
-   background: linear-gradient(135deg, var(--bg-gradient));
+   background: rgb(15,32,39); /* Old browsers */
+   background: -moz-linear-gradient(-45deg, rgba(15,32,39,1) 0%, rgba(29,54,62,1) 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(-45deg, rgba(15,32,39,1) 0%,rgba(29,54,62,1) 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(135deg, rgba(15,32,39,1) 0%,rgba(29,54,62,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    min-height:100vh;
    overflow-x: hidden;
 }
+
+body::before {
+   content:'';
+   position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/img/noise.png');
+  z-index:-1;
+}
+
+
 
 ul {
    margin:0;
@@ -40,3 +54,4 @@ a {
 @import "./components/Nav/hamburgerMenu.css";
 @import "./components/Nav/navList.css";
 @import "./routes/landing.css";
+@import "./components/Slider/slider.css";
