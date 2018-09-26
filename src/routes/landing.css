@@ -1,112 +1,109 @@
 .main-nav .logo {
-   display:none;
+   display: none;
 }
 
 .landing {
    position: relative;
-   width:100%;
-   height:100vh;
-   z-index:0;
+   width: 100%;
+   height: 100vh;
+   z-index: 0;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
 
-.landing .logo {
+.landing .logo, .landing-presentation {
    position: relative;
-   top:25px;
-   width:80%;
-   max-width:350px;
-   transition:1s;
+   top: 25px;
+   transition: 0.5s;
+   box-shadow:rgba(15,32,39,0.5) 0px 0px 30px;
+}
+
+.landing .logo {
+   width: 80%;
+   max-width: 350px;
 }
 
 .landing-presentation {
-   position: relative;
-   top:25px;
    width: calc(80% - 6px);
    box-sizing: border-box;
-   max-width:344px;
-   background: linear-gradient(135deg,rgba(44,83,100,0.5), rgba(15,32,39,0.5));
-   padding:30px 20px;
-   z-index:-1;
+   max-width: 344px;
+   background: linear-gradient(135deg, rgba(44, 83, 100, 0.5), rgba(15, 32, 39, 0.5));
+   padding: 30px 20px;
+   z-index: -1;
 }
 
 .landing-presentation::before, .landing-presentation::after {
-   content:'';
+   content: '';
    position: absolute;
 }
 
 .landing-presentation::before {
    top: -3px;
- left: -3px;
- right: -3px;
- bottom: -3px;
- background-image: -webkit-gradient(radial, right top, 10, 90% 0%, 150, from(var(--yellow)), to(var(--cyan)));
- background-image: -webkit-radial-gradient(right top, 150px 230px, var(--yellow), var(--cyan));
- background-image: -moz-radial-gradient(right top, farthest-corner, var(--yellow) 0%, var(--cyan)) 72%);
- z-index: -3;
+   left: -3px;
+   right: -3px;
+   bottom: -3px;
+   background-image: -webkit-gradient(radial, right top, 10, 90% 0%, 150, from(var(--yellow)), to(var(--cyan)));
+   background-image: -webkit-radial-gradient(right top, 150px 230px, var(--yellow), var(--cyan));
+   background-image: -moz-radial-gradient(right top, farthest-corner, var(--yellow) 0%, var(--cyan)) 72%);
+   z-index: -3;
 }
 
 .landing-presentation::after {
-   top:0;
-   left:0;
-   bottom:0;
-   right:0;
-   background: linear-gradient(135deg,rgba(44,83,100,0.8), rgba(15,32,39,0.8));
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   background: linear-gradient(135deg, rgba(44, 83, 100, 0.8), rgba(15, 32, 39, 0.8));
    z-index: -2;
 }
 
+/* avoids the childs to have a box-shadow when hovering the parent */
+.landing-presentation > * {
+   box-shadow: none !important;
+}
+
 .landing-presentation h1 {
-   font-weight:600;
-   font-size:2em;
-   line-height:0.9em;
+   font-weight: 600;
+   font-size: 2em;
+   line-height: 0.9em;
    text-transform: uppercase;
 }
 
 .landing-presentation h2 {
-   font-size:1em;
-   font-weight:400;
-   line-height:1em;
-   margin-top:10px;
+   font-size: 1em;
+   font-weight: 400;
+   line-height: 1em;
+   margin-top: 10px;
 }
 
 @media screen and (min-width: 370px) {
-
    .landing .logo, .landing-presentation {
-      top:0;
+      top: 0;
    }
-
 }
-
 
 @media screen and (min-width: 750px) {
    .landing {
       flex-direction: row;
-      height:100vh;
-      top:0;
+      height: 100vh;
+      top: 0;
    }
-
-   .landing .logo{
-      width:350px;
+   .landing .logo {
+      width: 350px;
    }
-
    .landing-presentation {
       position: relative;
       width: 300px;
-      background: linear-gradient(135deg,rgba(44,83,100,0.5), rgba(15,32,39,0.5));
-      padding:60px 20px;
+      background: linear-gradient(135deg, rgba(44, 83, 100, 0.5), rgba(15, 32, 39, 0.5));
+      padding: 60px 20px;
    }
-
-
    .landing-presentation h1 {
-      font-size:2.5em;
+      font-size: 2.5em;
    }
-
    .landing-presentation h2 {
-      font-size:1.2em;
-      margin-top:20px;
+      font-size: 1.2em;
+      margin-top: 20px;
    }
-
-
 }
